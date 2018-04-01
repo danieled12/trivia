@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Dan's Designer</title>
+  <link rel="stylesheet" href="assets/style/reset.css">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style/style.css">
@@ -11,24 +12,31 @@
 
 <body>
 
-<div id="title">
-  <div class="jumbotron vertical-center">
-  <div class="container text-center">
-    <div class="col-12">
-    <h1 class="display-3">80's Trivia</h1>
+  <div class="logo">
+    <div class="container text-center">
+  		<img src="assets/images/logo.png">
+    </div>
   </div>
+
+<div class="trivia">
+  <div class = "container text-center">
+
+  		<button class = "btn" id = "start">Start</button>
+  			<div id = "currentQuestion"></div>
+  			<div class = "question"></div>
+  			<div class = "answerOptions"></div>
+
+  		  <div id = "result"></div>
+  		 	<div id = "correctedAnswer"></div>
+  		 	<div id = "gif"></div>
+
+  		  <div id = "endingMessage"></div>
+  		 	<div id = "correctAnswers"></div>
+  		 	<div id = "incorrectAnswers"></div>
+  		 	<div id = "unanswered"></div>
+  		 	<div id = "startOver"></div>
+  	</div>
 </div>
-</div>
-</div>
-
-<div id="trivia">
-  <div class="container">
-    <div class="row">
-      <div class="col-8">
-        
-
-
-
 
 <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
