@@ -59,33 +59,32 @@ var resultMessages = {
 
 $('#start').on('click', function(){
 	$(this).hide();
-	newGame();
+	nextGame();
 });
 
-$('#startOverBtn').on('click', function(){
+$('#startOver').on('click', function(){
 	$(this).hide();
-	newGame();
+	nextGame();
 });
 
-function newGame(){
+function nextGame(){
 	$('#endingMessage').empty();
-	$('#correctanswerOptions').empty();
-	$('#incorrectanswerOptions').empty();
+	$('#correctAnswers').empty();
+	$('#incorrectAnswers').empty();
 	$('#unanswered').empty();
 	currentQuestion = 0;
 	correctAnswer = 0;
 	incorrectAnswer = 0;
 	unanswered = 0;
-	newQuestion();
+	nextQuestion();
 };
 
-function newQuestion(){
+function nextQuestion(){
 	$('#result').empty();
 	$('#correctedAnswer').empty();
 	$('#gif').empty();
 	answered = true;
 
-	//sets up new questions & answerOptions
 	$('#currentQuestion').html('Question #'+(currentQuestion+1)+'/'+triviaSection.length);
 	$('.question').html('<h2>' + triviaSection[currentQuestion].question + '</h2>');
 	for(var i = 0; i < 4; i++){
@@ -97,16 +96,16 @@ function newQuestion(){
 	};
 		$('.thisChoice').on('click',function(){
 			userSelect = $(this).data('index');
-			answerPage()
+			answerSection()
 		});
 };
 
 var correctAnswerText
 var correctAnswerIndex
 
-function answerPage(){
+function answerSection(){
 	$('#currentQuestion').empty();
-	$('.thisChoice').empty(); //Clears question page
+	$('.thisChoice').empty();
 	$('.question').empty();
 
 	correctAnswerText = triviaSection[currentQuestion].answerOptions[triviaSection[currentQuestion].answer];
@@ -127,10 +126,10 @@ function answerPage(){
 	}
 
 	if(currentQuestion == (triviaSection.length-1)){
-		setTimeout(scoreboard, 5000)
+		setTimeout(scoreboard, 1000)
 	} else{
 		currentQuestion++;
-		setTimeout(newQuestion, 5000);
+		setTimeout(newQuestion, 1000);
 	}
 }
 
@@ -144,7 +143,8 @@ function scoreboard(){
 	$('#incorrectAnswers').html("Incorrect Answers: " + incorrectAnswer);
 	$('#startOver').addClass('reset');
 	$('#startOver').show();
-	$('#startOver').html('Restart?');
-}
+	$('#startOver').html('Restart');
+
+};
 
 });

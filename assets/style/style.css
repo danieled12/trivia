@@ -1,27 +1,28 @@
 body {
   background: url("../images/background.jpg") no-repeat center center fixed;
   background-size: cover;
+  text-align: center;
+}
+
+.container{
+	text-align: center;
+	width: 900px;
 }
 
 .trivia {
   background-color: rgba(0, 0, 0, .4);
-  text-align: center;
   min-height: 100%;
   height: 650px;
 }
 
-.trivia hover {
-   opacity: 1.0;
-   filter: alpha(opacity=100);
-}
-
-button {
+.btn, .reset {
   background-color: #a61268;
   margin-top: 10%;
   height: 100px;
   width: 200px;
   color: white;
   border-radius: 25px;
+  font-size: 25px;
 }
 
 h2 {
@@ -36,13 +37,13 @@ h2 {
 
 .thisChoice {
   font-size: 20px;
-  color: white
+  color: white;
 }
 
 .thisChoice:hover{
 	background-color: #a61268;
 	color: white;
-	padding: 10px;
+	padding: 15px;
 }
 
 #result, #correctedAnswer, #endingMessage, #correctAnswers, #incorrectAnswers {
@@ -53,4 +54,8 @@ h2 {
 #answerOptions {
   color: white;
   padding-top: 20px;
+}
+
+#gif {
+  padding-top: 10px;
 }
