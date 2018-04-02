@@ -114,7 +114,7 @@ function answerSection(){
 	if((userSelect == correctAnswerIndex) && (answered == true)){
 		correctAnswer++;
 		$('#result').html(resultMessages.correct);
-		var correctGif = '<iframe src="https://giphy.com/embed/XenWVVdSzaxLW" width="480" height="349"></iframe>';
+		var correctGif = '<iframe class="img-responsive" src="https://giphy.com/embed/XenWVVdSzaxLW" width="480" height="349"></iframe>';
 			$('#gif').html(correctGif);
 	} else if
 	((userSelect != correctAnswerIndex) && (answered == true)){
