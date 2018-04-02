@@ -126,14 +126,14 @@ function answerSection(){
 	}
 
 	if(currentQuestion == (triviaSection.length-1)){
-		setTimeout(scoreboard, 1000)
+		setTimeout(endScreen, 4000)
 	} else{
 		currentQuestion++;
-		setTimeout(newQuestion, 1000);
+		setTimeout(nextQuestion, 4000);
 	}
 }
 
-function scoreboard(){
+function endScreen(){
 	$('#result').empty();
 	$('#correctedAnswer').empty();
 	$('#gif').empty();
