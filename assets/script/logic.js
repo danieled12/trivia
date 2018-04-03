@@ -6,8 +6,8 @@ var triviaSection = [{
 	answer: 3
 }, {
 	question: "What color were the Tigers on the cover of Michael Jacksons Thriller?",
-	answerOptions: ["White", "Red", "Orange", "Blue"],
-	answer: 0
+	answerOptions: ["Orange", "Red", "White", "Blue"],
+	answer: 2
 }, {
 	question: "What was the best selling album in the US in the 80's",
 	answerOptions: ["Micheal Jackson - Thriller", "Whitney Houston - Houston", "AC/DC - Back in Black", "Bruce Springsteen - Born in the U.S.A."],
@@ -22,20 +22,20 @@ var triviaSection = [{
 	answer: 0
 },{
 	question: "Which of these songs from Michael Jackson's legendary 1982 Thriller album was not released as a single?",
-	answerOptions: ["Pretty Young Thing", "Baby Be Mine", "Human Nature", "The Girl Is Mine"],
-	answer: 1
+	answerOptions: ["Pretty Young Thing", "The Girl Is Mine", "Human Nature", "Baby Be Mine"],
+	answer: 3
 },{
 	question: "Cabbage Patch Kids, among the most sought-after toys of all time, were originally called what?",
-	answerOptions: ["Little People", "Backyard Babies", "Turnip Tots", "Young Uns"],
-	answer: 0
+	answerOptions: ["Backyard Babies", "Little People", "Turnip Tots", "Young Uns"],
+	answer: 1
 },{
 	question: "President Ronald Reagan gave out jars of which candy to White House visitors?",
 	answerOptions: ["Jelly Bellys", "Gummi Bears", "Hershey Kisses", "M&Ms"],
 	answer: 0
 },{
 	question: "What is the name of the oldest child on “The Cosby Show”?",
-	answerOptions: ["Sondra", "Bobby", "Joey", "Denise"],
-	answer: 0
+	answerOptions: ["Denise", "Bobby", "Joey", "Sondra"],
+	answer: 3
 },{
 	question: "How much memory did the average computer have in the 80's",
 	answerOptions: ["12", "154", "64", "90"],
@@ -126,10 +126,10 @@ function answerSection(){
 	}
 
 	if(currentQuestion == (triviaSection.length-1)){
-		setTimeout(endScreen, 4000)
+		setTimeout(endScreen, 3500)
 	} else{
 		currentQuestion++;
-		setTimeout(nextQuestion, 4000);
+		setTimeout(nextQuestion, 3500);
 	}
 }
 
