@@ -46,7 +46,6 @@ var triviaSection = [{
 var currentQuestion;
 var correctAnswer;
 var incorrectAnswer;
-var unanswered;
 var answered;
 var userSelect;
 
@@ -71,11 +70,9 @@ function nextGame(){
 	$('#endingMessage').empty();
 	$('#correctAnswers').empty();
 	$('#incorrectAnswers').empty();
-	$('#unanswered').empty();
 	currentQuestion = 0;
 	correctAnswer = 0;
 	incorrectAnswer = 0;
-	unanswered = 0;
 	nextQuestion();
 };
 
@@ -86,13 +83,13 @@ function nextQuestion(){
 	answered = true;
 
 	$('#currentQuestion').html('Question #'+(currentQuestion+1)+'/'+triviaSection.length);
-	$('.question').html('<h2>' + triviaSection[currentQuestion].question + '</h2>');
+	$('#newQuestion').html('<h2>' + triviaSection[currentQuestion].question + '</h2>');
 	for(var i = 0; i < 4; i++){
 		var choices = $('<div>');
 		choices.text(triviaSection[currentQuestion].answerOptions[i]);
 		choices.attr({'data-index': i });
 		choices.addClass('thisChoice');
-		$('.answerOptions').append(choices);
+		$('#answerOptions').append(choices);
 	};
 		$('.thisChoice').on('click',function(){
 			userSelect = $(this).data('index');
@@ -105,8 +102,8 @@ var correctAnswerIndex
 
 function answerSection(){
 	$('#currentQuestion').empty();
+	$('#newQuestion').empty();
 	$('.thisChoice').empty();
-	$('.question').empty();
 
 	correctAnswerText = triviaSection[currentQuestion].answerOptions[triviaSection[currentQuestion].answer];
 	correctAnswerIndex = triviaSection[currentQuestion].answer;
@@ -127,9 +124,9 @@ function answerSection(){
 
 	if(currentQuestion == (triviaSection.length-1)){
 		setTimeout(endScreen, 3500)
-	} else{
-		currentQuestion++;
-		setTimeout(nextQuestion, 3500);
+	} 	else {
+				currentQuestion++;
+				setTimeout(nextQuestion, 3500);
 	}
 }
 

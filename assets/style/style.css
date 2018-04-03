@@ -39,8 +39,7 @@ h2 {
 }
 
 #currentQuestion {
-  color: white;
-  padding-top: 20px;
+  padding-top: 5px;
 }
 
 .thisChoice {
@@ -60,8 +59,7 @@ h2 {
 }
 
 #answerOptions {
-  color: white;
-  padding-top: 20px;
+  padding: 10px;
 }
 
 #gif {
